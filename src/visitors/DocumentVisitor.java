@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+import SymbolTable.Scope;
+import SymbolTable.SymboleTable;
 import misc.HTMLParser.ArrayLoopRawContext;
 import misc.HTMLParser.AttributeNodeContext;
 import misc.HTMLParser.BodyContext;
@@ -41,13 +43,15 @@ import models.expression.ValueExpression;
 import models.nodes.*;
 import models.statements.*;
 
+
 public class DocumentVisitor extends Visitor<AbstractASTNode>{ 
-	
+
 	protected static Stack<Boolean> switchExists;
-	
+	private Stack<Scope> scopesStack = new Stack<>();
 	public DocumentVisitor() {
 		if (switchExists == null)
 			switchExists = new Stack<Boolean>();
+
 	}
 	@Override
 	public AbstractASTNode visitScript(ScriptContext ctx) {
@@ -61,13 +65,16 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 
 	@Override
 	public AbstractASTNode visitDocument(DocumentContext ctx) {
+		System.out.print("in the visitDocument ");
 		DocumentHeader header = (DocumentHeader) visit(ctx.getChild(0));
 		DocumentBody body = (DocumentBody) visit(ctx.getChild(1));
+
 		return new Document(header, body);
 	}
 
 	@Override
 	public AbstractASTNode visitHeader(HeaderContext ctx) {
+		System.out.print("in the  visitHeader");
 		List<DocumentNode> headers = new ArrayList<DocumentNode>();
 		DocumentHeader header = new DocumentHeader(headers);
 		for (int index = 0; index < ctx.getChildCount(); index++) {
@@ -81,16 +88,19 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 
 	@Override
 	public AbstractASTNode visitComment(CommentContext ctx) {
+		System.out.print("in the visitComment");
 		return new CommentNode(ctx.HTML_COMMENT().getText(), CommentType.Normal);
 	}
 
 	@Override
 	public AbstractASTNode visitConditionalComment(ConditionalCommentContext ctx) {
+		System.out.print("in the  visitConditionalComment");
 		return new CommentNode(ctx.HTML_CONDITIONAL_COMMENT().getText(), CommentType.Conditional);
 	}
 
 	@Override
 	public AbstractASTNode visitBody(BodyContext ctx) {
+		System.out.print("in the visitBody");
 		List<DocumentNode> contents = new ArrayList<DocumentNode>();
 		DocumentBody body = new DocumentBody(contents);
 		for (int index = 0; index < ctx.getChildCount(); index++)
@@ -100,14 +110,24 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 
 	@Override
 	public AbstractASTNode visitExpDirective(ExpDirectiveContext ctx) {
+		System.out.print("in the visitExpDirective");
+        // i think we should view the top of the stack this will be the parent of the scope
+        if(ctx.getChild(0).getText()=="cp-if")
+        {
+            Scope scope = new Scope(ctx.getChild(0).getText().hashCode(),null);
+
+//            this.symboletable.addScope(scope);
+        }
 		AbstractASTNode value = expressionVisitor.visit(ctx.getChild(3));
 		return new Directive(ctx.getChild(0).getText(), value);
 	}
 
 	@Override
 	public AbstractASTNode visitStmtDirective(StmtDirectiveContext ctx) {
+		System.out.print("in the visitStmtDirective ");
 		AbstractASTNode value = visit(ctx.getChild(3));
 		return new Directive(ctx.getChild(0).getText(), value);
+
 	}
 
 	@Override
@@ -117,6 +137,7 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 
 	@Override
 	public AbstractASTNode visitArrayLoopRaw(ArrayLoopRawContext ctx) {
+		System.out.print("in the visitArrayLoopRaw ");
 		AbstractASTNode arrayToLoopOn = expressionVisitor.visit(ctx.getChild(2));
 		String loopVariable = ctx.getChild(0).getText();
 		return new ArrayLoopStatement(loopVariable, (ValueExpression) arrayToLoopOn);
@@ -124,6 +145,7 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 
 	@Override
 	public AbstractASTNode visitIndexedArrayLoop(IndexedArrayLoopContext ctx) {
+		System.out.print("in the visitIndexedArrayLoop ");
 		AbstractASTNode arrayToLoopOn = expressionVisitor.visit(ctx.getChild(2));
 		String loopVariable = ctx.getChild(0).getText();
 		String indexVariable = ctx.getChild(4).getText();
@@ -132,6 +154,7 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 
 	@Override
 	public AbstractASTNode visitDefaultDirective(DefaultDirectiveContext ctx) {
+		System.out.print("in the visitDefaultDirective ");
 		return new Directive(ctx.getChild(0).getText());
 	}
 
@@ -142,6 +165,7 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 
 	@Override
 	public AbstractASTNode visitRawObjectLoop(RawObjectLoopContext ctx) {
+		System.out.print("in the visitRawObjectLoop ");
 		AbstractASTNode objectToLoopOn = expressionVisitor.visit(ctx.getChild(4));
 		String KeyVariable = ctx.getChild(0).getText();
 		String valueVariable = ctx.getChild(2).getText();
@@ -150,6 +174,7 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 
 	@Override
 	public AbstractASTNode visitFilterExpression(FilterExpressionContext ctx) {
+		System.out.print("in the visitFilterExpression ");
 		Expression oprand = expressionVisitor.visit(ctx.getChild(0));
 		FilterStatement filter = (FilterStatement) visit(ctx.getChild(1));
 		filter.setOprand(oprand);
@@ -158,12 +183,14 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 
 	@Override
 	public AbstractASTNode visitRawFilter(RawFilterContext ctx) {
+		System.out.print("in the visitRawFilter ");
 		AbstractASTNode filter = expressionVisitor.visit(ctx.getChild(1));
 		return new FilterStatement((Expression) filter);
 	}
 
 	@Override
 	public AbstractASTNode visitParametrizedFilter(ParametrizedFilterContext ctx) {
+		System.out.print("in the visitParametrizedFilter ");
 		AbstractASTNode filter = expressionVisitor.visit(ctx.getChild(1));
 		List<Expression> parameters = new ArrayList<Expression>();
 		for (int index = 0; index < ctx.getChild(3).getChildCount(); index += 2 ) {
@@ -174,22 +201,27 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 
 	@Override
 	public AbstractASTNode visitNode(NodeContext ctx) {
+		System.out.print("in the visitNode ");
 		return visit(ctx.getChild(0));
 	}
 
 	public List<AbstractASTNode> getContent(ElementContentContext ctx) {
+		System.out.print("in the getContent ");
 		List<AbstractASTNode> contents = new ArrayList<AbstractASTNode>();
 		for (int index = 0; index < ctx.getChildCount(); index++) {
 			if (ctx.getChild(index) instanceof NodeContext || ctx.getChild(index) instanceof MustacheContext)
 				contents.add(visit(ctx.getChild(index)));
+
 			else 
 				contents.add(new TextNode(ctx.getChild(index).getText()));
 		}
+
 		return contents;
 	}
 
 	@Override
 	public AbstractASTNode visitHalfElement(HalfElementContext ctx) {
+		System.out.print("in the visitHalfElement ");
 		String tagName = ctx.getChild(1).getText();
 		List<AbstractASTNode> attributes = new ArrayList<AbstractASTNode>();
 		
@@ -199,10 +231,12 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 		ElementNode element = new ElementNode(tagName, attributes.toArray(new DocumentNode[attributes.size()]));
 		return element;
 	}
-
+ // still understanding it
 	@Override
 	public AbstractASTNode visitNormalElement(NormalElementContext ctx) {
+		System.out.print("in the visitNormalElement ");
 		String tagName = ctx.getChild(1).getText();
+		System.out.print(tagName);
 		String tagClose;
 		if (ctx.getChild(2) instanceof ElementAttributesContext) {
 			tagClose = ctx.getChild(6).getText();
@@ -215,6 +249,12 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 		
 		if (ctx.getChild(2) instanceof ElementAttributesContext)
 			attributes = getAttributes((ElementAttributesContext) ctx.getChild(2));
+//		System.out.print("print the attribute we have here ....."+attributes.get(0).toString());
+		if(attributes.size()!=0)
+		{
+			for(int i=0;i<attributes.size();i++)
+			System.out.print("print the attribut we have here ....."+attributes.get(i));
+		}
 		boolean switchElement = false;
 		for (AbstractASTNode node: attributes)
 			if (node instanceof Directive && testName(((Directive) node).getName(), "cp-switch")) {
@@ -232,11 +272,13 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 		if (switchElement)
 			switchExists.pop();
 		ElementNode element = new ElementNode(tagName, attributes.toArray(new DocumentNode[attributes.size()]), contents.toArray(new DocumentNode[contents.size()]));
+// i think we should do the pop from the stack
 		return element;
 	}
 
 	@Override
 	public AbstractASTNode visitSelfClosedElement(SelfClosedElementContext ctx) {
+		System.out.print("in the visitSelfClosedElement ");
 		String tagName = ctx.getChild(1).getText();
 		List<AbstractASTNode> attributes = new ArrayList<AbstractASTNode>();
 		
@@ -249,28 +291,42 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 
 	@Override
 	public AbstractASTNode visitTextNode(TextNodeContext ctx) {
+
+
 		return new TextNode(ctx.getText());
 	}
 
+	//help to store the visit the node "element attribute" and store in list {store attribute and directives }
 	public List<AbstractASTNode> getAttributes(ElementAttributesContext ctx) {
+		System.out.print("in the getAttributes  trying to do somthing ");
 		List<AbstractASTNode> attributes = new ArrayList<AbstractASTNode>();
 		for (int index = 0; index < ctx.getChildCount(); index++) {
 			attributes.add(visit(ctx.getChild(index)));
 		}
+//		if(attributes.size()!=0)
+//for(int i=0;i<attributes.size();i++)
+//{
+//System.out.print("try to go inside the attribute "+attributes.get(i));
+//}
 		return attributes;
 	}
 
 	@Override
+	// help to visit and store name and vale for the attribute node like class id datamodel
 	public AbstractASTNode visitAttributeNode(AttributeNodeContext ctx) {
+		System.out.print("in the visitAttributeNode ");
 		String name = ctx.getChild(0).getText();
 		String value = null;
 		if (ctx.getChildCount() > 1)
 			value = ctx.getChild(2).getText();
+//		System.out.print(name);
+//		System.out.print(value);
 		return new AttributeNode(name, value);
 	}
 
 	@Override
 	public AbstractASTNode visitMustache(MustacheContext ctx) {
+		System.out.print("in the visitMustache ");
 		MustachNode mustache;
 		if (ctx.getChildCount() > 2) {
 			mustache = new MustachNode(expressionVisitor.visit(ctx.getChild(1)));

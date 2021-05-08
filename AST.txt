@@ -2,15 +2,57 @@ Document: {
 	header(DocumentHeader): {},
 	body(DocumentBody): {
 		ElementNode: {
-			name: p,
+			name: html,
 			type: Normal,
-			children: [],
-			attributes: [
-				AttributeNode: {
-					attribute: class,
-					value: "{{asdf}}",
-				}
+			children: [
+				ElementNode: {
+					name: head,
+					type: Normal,
+					children: [
+					],
+					attributes: [],
+				},
+				ElementNode: {
+					name: body,
+					type: Normal,
+					children: [
+						ElementNode: {
+							name: div,
+							type: Normal,
+							children: [
+								ElementNode: {
+									name: p,
+									type: Normal,
+									children: [
+									],
+									attributes: [
+										Directive: {
+											type: cp-if,
+											value(LessThanComparisionExpression): {
+												leftOprand(FunctionCallExpression): {
+													function(ReferenceExpression): {
+														reference: result,
+													},
+												},
+												rightOprand(NumberLiteral): {
+													value: 30.0,
+												},
+											},
+										},
+										AttributeNode: {
+											attribute: id,
+											value: "k",
+										}
+									],
+								},
+							],
+							attributes: [],
+						},
+					],
+					attributes: [],
+				},
 			],
-		},
+			attributes: [],
+		},,
 	},
 }

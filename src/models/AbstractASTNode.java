@@ -1,11 +1,12 @@
 package models;
 
+
 import models.util.Formatter;
 
 public abstract class AbstractASTNode implements ASTNodeInterface {
 
 	abstract protected String nodeName();
-	
+
 	abstract protected Formatter nodeValue(Formatter formatter);
 	
 	public String format(Formatter formatter) {
