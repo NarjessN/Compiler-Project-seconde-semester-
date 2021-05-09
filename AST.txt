@@ -6,13 +6,6 @@ Document: {
 			type: Normal,
 			children: [
 				ElementNode: {
-					name: head,
-					type: Normal,
-					children: [
-					],
-					attributes: [],
-				},
-				ElementNode: {
 					name: body,
 					type: Normal,
 					children: [
@@ -21,38 +14,77 @@ Document: {
 							type: Normal,
 							children: [
 								ElementNode: {
-									name: p,
+									name: div,
+									type: Normal,
+									children: [
+										ElementNode: {
+											name: div,
+											type: Normal,
+											children: [
+											],
+											attributes: [
+												Directive: {
+													type: cp-if,
+													value(ExclamationExpression): {
+														oprand(ReferenceExpression): {
+															reference: isAuthenitcated,
+														},
+													},
+												}
+											],
+										},
+									],
+									attributes: [
+										Directive: {
+											type: cp-if,
+											value(ExclamationExpression): {
+												oprand(ReferenceExpression): {
+													reference: isAuthenitcated,
+												},
+											},
+										}
+									],
+								},
+								ElementNode: {
+									name: div,
 									type: Normal,
 									children: [
 									],
 									attributes: [
 										Directive: {
 											type: cp-if,
-											value(LessThanComparisionExpression): {
-												leftOprand(FunctionCallExpression): {
-													function(ReferenceExpression): {
-														reference: result,
-													},
-												},
-												rightOprand(NumberLiteral): {
-													value: 30.0,
+											value(ExclamationExpression): {
+												oprand(ReferenceExpression): {
+													reference: isAuthenitcated,
 												},
 											},
-										},
-										AttributeNode: {
-											attribute: id,
-											value: "k",
 										}
 									],
 								},
+								ElementNode: {
+									name: div,
+									type: Normal,
+									children: [
+									],
+									attributes: [],
+								},
 							],
-							attributes: [],
+							attributes: [
+								Directive: {
+									type: cp-if,
+									value(ExclamationExpression): {
+										oprand(ReferenceExpression): {
+											reference: isAuthenitcated,
+										},
+									},
+								}
+							],
 						},
 					],
 					attributes: [],
 				},
 			],
 			attributes: [],
-		},,
+		},
 	},
 }

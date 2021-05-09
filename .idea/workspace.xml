@@ -1,177 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc69d0d7-9a29-492e-a022-f5079572e643" name="Default Changelist" comment="symbole table structure + workign wiht scope">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SymbolTable/Scope.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SymbolTable/Symbol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SymbolTable/SymboleTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/antlr_4_7_2_complete.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/antlr_runtime_4_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="fc69d0d7-9a29-492e-a022-f5079572e643" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AST.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AST.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Compiler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Compiler.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Compiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Compiler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLLexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLLexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$AccessContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$AccessContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$AdditionExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$AdditionExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$AndExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$AndExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ArrayLoopContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ArrayLoopContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ArrayLoopRawContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ArrayLoopRawContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$AttributeNodeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$AttributeNodeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$BodyContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$BodyContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$BooleanLiteralContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$BooleanLiteralContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$CommentContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$CommentContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$CommentNodeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$CommentNodeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ComparisonExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ComparisonExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ComparisonOperatorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ComparisonOperatorContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$CompoundContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$CompoundContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ConditionalCommentContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ConditionalCommentContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$DefaultDirectiveContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$DefaultDirectiveContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$DirectiveContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$DirectiveContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$DividExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$DividExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$DocumentContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$DocumentContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ElementAttributesContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ElementAttributesContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ElementContentContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ElementContentContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ElementNodeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ElementNodeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$EqualComparisionExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$EqualComparisionExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ExclaminationExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ExclaminationExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ExpContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ExpContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ExpDirectiveContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ExpDirectiveContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$FilterContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$FilterContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$FilterExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$FilterExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$FunctionCallContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$FunctionCallContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$HalfElementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$HalfElementContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$HeaderContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$HeaderContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$IndexAccessContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$IndexAccessContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$IndexedArrayLoopContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$IndexedArrayLoopContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$LessEqualComparisionExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$LessEqualComparisionExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$LessThanComparisionExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$LessThanComparisionExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$LiteralArrayContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$LiteralArrayContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$LiteralContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$LiteralContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$LiteralObjectContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$LiteralObjectContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$LogicalExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$LogicalExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$LogicalOperatorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$LogicalOperatorContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$LoopStatementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$LoopStatementContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$MinusExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$MinusExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ModExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ModExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$MoreEqualComparisionExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$MoreEqualComparisionExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$MoreThanComparisionExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$MoreThanComparisionExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$MultiExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$MultiExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$MustacheContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$MustacheContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$NodeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$NodeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$NormalElementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$NormalElementContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$NotEqualComparisionExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$NotEqualComparisionExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$NumberLiteralContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$NumberLiteralContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ObjectLoopContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ObjectLoopContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ObjectPropertyContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ObjectPropertyContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$OrExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$OrExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ParameterContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ParameterContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ParametersContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ParametersContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ParametrizedFilterContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ParametrizedFilterContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ParenthesizedContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ParenthesizedContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$PostDecrementExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$PostDecrementExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$PostIncrementExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$PostIncrementExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$PreDecrementExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$PreDecrementExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$PreIncrementExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$PreIncrementExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$PrimitiveContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$PrimitiveContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$PropertyAccessContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$PropertyAccessContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$RawFilterContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$RawFilterContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$RawObjectLoopContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$RawObjectLoopContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ReferenceContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ReferenceContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ReferenceExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ReferenceExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ScriptContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ScriptContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$ScriptletOrSeaWsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$ScriptletOrSeaWsContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$SelfClosedElementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$SelfClosedElementContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$StmtDirectiveContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$StmtDirectiveContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$StringLiteralContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$StringLiteralContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$StyleContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$StyleContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$TernaryConditionalExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$TernaryConditionalExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser$TextNodeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser$TextNodeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParserBaseListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParserBaseListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParserBaseVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParserBaseVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParserListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParserListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/misc/HTMLParserVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/misc/HTMLParserVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/ASTNodeInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/ASTNodeInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/AbstractASTNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/AbstractASTNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/directive/Directive.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/directive/Directive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/documents/Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/documents/Document.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/documents/DocumentBody.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/documents/DocumentBody.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/documents/DocumentHeader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/documents/DocumentHeader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/enums/CommentType.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/enums/CommentType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/enums/DirectiveType.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/enums/DirectiveType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/enums/ElementType.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/enums/ElementType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/BinaryExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/BinaryExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/Expression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/Expression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/TernaryExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/TernaryExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/UnaryExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/UnaryExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/ValueExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/ValueExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/AdditionExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/AdditionExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/AndExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/AndExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/ArithmeticExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/ArithmeticExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/ComparsionExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/ComparsionExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/DividExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/DividExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/EqualComparisionExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/EqualComparisionExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/LessEqualComparisionExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/LessEqualComparisionExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/LessThanComparisionExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/LessThanComparisionExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/LogicalExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/LogicalExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/MinusExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/MinusExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/ModExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/ModExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/MoreEqualComparisionExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/MoreEqualComparisionExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/MoreThanComparisionExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/MoreThanComparisionExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/MultiExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/MultiExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/NotEqualComparisionExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/NotEqualComparisionExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/binary/OrExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/binary/OrExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/ternary/TernaryConditionalExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/ternary/TernaryConditionalExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/unary/ExclamationExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/unary/ExclamationExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/unary/PostDecrementExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/unary/PostDecrementExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/unary/PostIncrementExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/unary/PostIncrementExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/unary/PreDecrementExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/unary/PreDecrementExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/unary/PreIncrementExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/unary/PreIncrementExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/value/FunctionCallExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/value/FunctionCallExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/value/literal/ArrayLiteral.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/value/literal/ArrayLiteral.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/value/literal/BooleanLiteral.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/value/literal/BooleanLiteral.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/value/literal/CompoundLiteral.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/value/literal/CompoundLiteral.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/value/literal/LiteralValueExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/value/literal/LiteralValueExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/value/literal/NumberLiteral.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/value/literal/NumberLiteral.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/value/literal/ObjectLiteral.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/value/literal/ObjectLiteral.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/value/literal/PrimitiveLiteral.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/value/literal/PrimitiveLiteral.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/value/literal/StringLiteral.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/value/literal/StringLiteral.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/value/misc/ObjectProperty.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/value/misc/ObjectProperty.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/value/reference/AccessByIndex.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/value/reference/AccessByIndex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/value/reference/AccessByProperty.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/value/reference/AccessByProperty.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/value/reference/AccessExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/value/reference/AccessExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/value/reference/AccessMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/value/reference/AccessMethod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/expression/value/reference/ReferenceExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/expression/value/reference/ReferenceExpression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/nodes/AttributeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/nodes/AttributeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/nodes/CommentNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/nodes/CommentNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/nodes/DocumentNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/nodes/DocumentNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/nodes/ElementNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/nodes/ElementNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/nodes/MustachNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/nodes/MustachNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/nodes/ScriptNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/nodes/ScriptNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/nodes/StyleNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/nodes/StyleNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/nodes/TextNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/nodes/TextNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/statements/ArrayLoopStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/statements/ArrayLoopStatement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/statements/FilterStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/statements/FilterStatement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/statements/LoopStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/statements/LoopStatement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/statements/ObjectLoopStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/statements/ObjectLoopStatement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/statements/Statement.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/statements/Statement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/models/util/Formatter.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/models/util/Formatter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/visitors/DocumentVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/visitors/DocumentVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/visitors/ExpressionVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/visitors/ExpressionVisitor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/visitors/Visitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/visitors/Visitor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Compiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Compiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/misc/HTMLLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/HTMLLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/misc/HTMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/HTMLParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/misc/HTMLParserBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/HTMLParserBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/misc/HTMLParserBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/HTMLParserBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/misc/HTMLParserListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/HTMLParserListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/misc/HTMLParserVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/HTMLParserVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/AbstractASTNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/AbstractASTNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SymbolTable/Scope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SymbolTable/Scope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SymbolTable/SymboleTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SymbolTable/SymboleTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/visitors/DocumentVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visitors/DocumentVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/visitors/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/visitors/Visitor.java" afterDir="false" />
     </list>
@@ -207,6 +45,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="D:/narjess/محاضرات السنوات/السنة الرابعة/فصل الثاني/كومبايلر 2/compiler project/final compiler version/Compiler_s2" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -259,8 +98,18 @@
       <workItem from="1619940417173" duration="4873000" />
       <workItem from="1620075859906" duration="3623000" />
       <workItem from="1620116242781" duration="3715000" />
-      <workItem from="1620467516604" duration="416000" />
+      <workItem from="1620467516604" duration="10659000" />
+      <workItem from="1620502423784" duration="3196000" />
+      <workItem from="1620554762490" duration="6791000" />
     </task>
+    <task id="LOCAL-00001" summary="symbole table structure + workign wiht scope">
+      <created>1620468119297</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620468119297</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,8 +142,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/visitors/DocumentVisitor.java</url>
-          <line>68</line>
+          <line>72</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/visitors/DocumentVisitor.java</url>
+          <line>284</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

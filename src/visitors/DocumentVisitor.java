@@ -66,9 +66,13 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 	@Override
 	public AbstractASTNode visitDocument(DocumentContext ctx) {
 		System.out.print("in the visitDocument ");
+		Scope s = new Scope(null);
+		s.setId("global");
+		scopesStack.push(s);
+		System.out.print("print symbole table ");
 		DocumentHeader header = (DocumentHeader) visit(ctx.getChild(0));
 		DocumentBody body = (DocumentBody) visit(ctx.getChild(1));
-
+		this.showSymboleTable();
 		return new Document(header, body);
 	}
 
@@ -111,14 +115,17 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 	@Override
 	public AbstractASTNode visitExpDirective(ExpDirectiveContext ctx) {
 		System.out.print("in the visitExpDirective");
-        // i think we should view the top of the stack this will be the parent of the scope
-        if(ctx.getChild(0).getText()=="cp-if")
-        {
-            Scope scope = new Scope(ctx.getChild(0).getText().hashCode(),null);
+	// if condition to know what the directive we have
 
-//            this.symboletable.addScope(scope);
-        }
+        if(ctx.getChild(0).getText().equals("cp-if") ) {
+			Scope scope = new Scope(scopesStack.peek());
+			scope.setId(ctx.getChild(0).getText()+"_"+scope.hashCode());
+			this.symboletable.addScope(scope);
+			scopesStack.push(scope);
+
+		}
 		AbstractASTNode value = expressionVisitor.visit(ctx.getChild(3));
+
 		return new Directive(ctx.getChild(0).getText(), value);
 	}
 
@@ -250,11 +257,11 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 		if (ctx.getChild(2) instanceof ElementAttributesContext)
 			attributes = getAttributes((ElementAttributesContext) ctx.getChild(2));
 //		System.out.print("print the attribute we have here ....."+attributes.get(0).toString());
-		if(attributes.size()!=0)
-		{
-			for(int i=0;i<attributes.size();i++)
-			System.out.print("print the attribut we have here ....."+attributes.get(i));
-		}
+//		if(attributes.size()!=0)
+//		{
+//			for(int i=0;i<attributes.size();i++)
+//			System.out.print("print the attribut we have here ....."+attributes.get(i));
+//		}
 		boolean switchElement = false;
 		for (AbstractASTNode node: attributes)
 			if (node instanceof Directive && testName(((Directive) node).getName(), "cp-switch")) {
@@ -272,7 +279,9 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 		if (switchElement)
 			switchExists.pop();
 		ElementNode element = new ElementNode(tagName, attributes.toArray(new DocumentNode[attributes.size()]), contents.toArray(new DocumentNode[contents.size()]));
-// i think we should do the pop from the stack
+		if(!scopesStack.peek().getId().equals("global"))
+			scopesStack.pop();
+
 		return element;
 	}
 
@@ -284,8 +293,8 @@ public class DocumentVisitor extends Visitor<AbstractASTNode>{
 		
 		if (ctx.getChild(2) instanceof ElementAttributesContext)
 			attributes = getAttributes((ElementAttributesContext) ctx.getChild(2));
-		
 		ElementNode element = new ElementNode(tagName, attributes.toArray(new DocumentNode[attributes.size()]));
+
 		return element;
 	}
 
